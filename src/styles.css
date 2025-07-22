@@ -1,0 +1,249 @@
+@import url('https://rsms.me/inter/inter.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #1a1a1a;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+#root {
+  cursor: crosshair;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Enhanced info overlay */
+.info-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 320px;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.info-overlay:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.info-overlay h3 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #4ecdc4;
+  text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+}
+
+.controls-section {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.controls-section p {
+  margin: 6px 0;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats-section {
+  margin-bottom: 16px;
+}
+
+.accent-text {
+  color: #4ecdc4;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.small-text {
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 4px 0;
+}
+
+/* Interactive toggle button */
+.toggle-btn {
+  background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+  margin-bottom: 12px;
+}
+
+.toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+  background: linear-gradient(45deg, #45b7d1, #4ecdc4);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Advanced info section */
+.advanced-info {
+  animation: slideDown 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+}
+
+.advanced-info ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.advanced-info li {
+  margin: 4px 0;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Interactive cursor styles */
+#root:hover {
+  cursor: grab;
+}
+
+#root:active {
+  cursor: grabbing;
+}
+
+/* Performance indicator */
+.fps-counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Keyboard shortcuts hint */
+.keyboard-hint {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .info-overlay {
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    padding: 16px;
+    max-width: 280px;
+  }
+  
+  .info-overlay h3 {
+    font-size: 16px;
+  }
+  
+  .toggle-btn {
+    font-size: 11px;
+    padding: 6px 12px;
+    margin-bottom: 8px;
+    display: block;
+    width: 100%;
+  }
+  
+  .fps-counter {
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+  }
+
+  .keyboard-hint {
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+  }
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  animation: pulse 2s infinite;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
