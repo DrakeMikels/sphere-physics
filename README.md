@@ -4,98 +4,107 @@
 
 A stunning React Three.js application featuring realistic physics simulations, advanced SSGI (Screen Space Global Illumination) rendering, and interactive 3D spheres.
 
+*Last deployed: January 2025*
+
 ## ✨ Features
 
-- **🎯 Real-time Physics**: Rapier physics engine with gravity and collisions
-- **🌟 Advanced Lighting**: SSGI (Screen Space Global Illumination) for realistic light bouncing
-- **🎨 Dynamic Materials**: Multiple sphere types (metallic, glass-like, matte)
-- **🖱️ Interactive Controls**: Mouse movement influences physics
-- **🎨 Color Customization**: Click to cycle through 8 vibrant accent colors
-- **📱 Responsive Design**: Works on desktop and mobile devices
-- **⚡ Optimized Performance**: Advanced post-processing with bloom and anti-aliasing
-
-## 🚀 Live Demo
-
-[View Live Demo](https://your-vercel-url.vercel.app)
-
-## 🛠️ Technology Stack
-
-- **React 18** - Modern React with hooks
-- **React Three Fiber** - React renderer for Three.js
-- **Three.js** - 3D graphics library
-- **Rapier Physics** - Real-time physics simulation
-- **Postprocessing** - Advanced visual effects
-- **Custom SSGI Effects** - Realistic global illumination
+- **Real-time Physics**: Powered by Rapier physics engine for realistic sphere interactions
+- **Advanced Lighting**: SSGI (Screen Space Global Illumination) for photorealistic rendering
+- **Interactive Controls**: Mouse influence, keyboard shortcuts, and dynamic color themes
+- **12 Color Themes**: Cycling through beautiful color palettes
+- **Post-processing Effects**: Bloom, FXAA anti-aliasing, and advanced shader effects
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Performance Optimized**: Efficient rendering with fallback systems
 
 ## 🎮 How to Use
 
-1. **Move your mouse** to influence sphere physics
-2. **Click anywhere** to change accent colors
-3. **Watch the spheres** interact with realistic physics
-4. **Enjoy the lighting** - see how light bounces between spheres
+- **Mouse Movement**: Influence physics simulation
+- **Click**: Change color themes
+- **Space**: Shake up the physics
+- **R**: Reset sphere positions
+- **C**: Cycle colors manually
 
-## 🏃‍♂️ Running Locally
+## 🚀 Technology Stack
 
-```bash
-# Install dependencies
-npm install
+- **React Three Fiber**: React renderer for Three.js
+- **Three.js**: 3D graphics library
+- **Rapier**: Real-time physics engine
+- **Postprocessing**: Advanced visual effects
+- **React**: Modern UI framework
 
-# Start development server
-npm start
+## 🛠️ Running Locally
 
-# Build for production
-npm run build
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/DrakeMikels/sphere-physics.git
+   cd sphere-physics
+   ```
 
-## 🚀 Deployment
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-This project is optimized for deployment on Vercel:
+3. **Start development server**
+   ```bash
+   npm start
+   ```
 
-```bash
-# Deploy to Vercel
-vercel --prod
-```
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 🌐 Deployment
+
+This project is optimized for Vercel deployment:
+
+- Pre-configured `vercel.json`
+- Optimized build settings
+- Static asset caching
+- Security headers included
+
+Simply connect your GitHub repository to Vercel for automatic deployments.
 
 ## 📁 Project Structure
 
 ```
-src/
-├── App.js              # Main application component
-├── Effects.js          # Post-processing effects
-├── styles.css          # Global styles
-├── realism-effects/    # Custom SSGI implementation
-│   ├── index.js
-│   └── v2.js
-└── index.js           # Entry point
+📦 sphere-physics
+├── 🎨 src/
+│   ├── App.js              # Main application component
+│   ├── Effects.js          # Post-processing and SSGI effects
+│   ├── styles.css          # Global styles and UI
+│   ├── index.js            # Application entry point
+│   └── realism-effects/    # Advanced lighting shaders
+├── 🌐 public/             # Static assets
+├── ⚙️ vercel.json         # Deployment configuration
+├── 📚 README.md           # Project documentation
+└── 🔧 package.json       # Dependencies and scripts
 ```
 
 ## 🎨 Customization
 
-The application is highly customizable:
-
 - **Colors**: Modify the `accents` array in `App.js`
-- **Physics**: Adjust gravity and physics parameters
+- **Physics**: Adjust gravity and damping in the Physics component
 - **Effects**: Configure SSGI settings in `Effects.js`
-- **Styling**: Update CSS variables for theming
+- **UI**: Customize styles in `styles.css`
 
-## 📱 Browser Support
+## 🌍 Browser Support
 
-- **Chrome/Edge**: Full support with all effects
-- **Firefox**: Full support with all effects  
-- **Safari**: Full support with all effects
-- **Mobile**: Optimized for touch devices
+- Chrome/Chromium 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
+
+**Note**: WebGL 2.0 support required for optimal performance.
 
 ## 📄 License
 
-MIT License - feel free to use this project for your own creations!
+MIT License - feel free to use this project for learning and development.
 
 ## 🙏 Acknowledgments
 
-- Original CodeSandbox inspiration
-- React Three Fiber community
-- Three.js ecosystem
-- Rapier physics engine
-
----
-
-**Built with ❤️ using React Three Fiber** 
+- Three.js community for amazing 3D web graphics
+- React Three Fiber for seamless React integration
+- Rapier physics engine for realistic simulations
+- Original CodeSandbox inspiration for SSGI implementation 
